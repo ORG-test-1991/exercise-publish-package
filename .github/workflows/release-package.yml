@@ -12,7 +12,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: npm install
+      - run: npm ci
       - name: Cache NPM dependencies
         uses: actions/cache@v2
         with:
@@ -25,7 +25,7 @@ jobs:
           git config --global user.email "you@example.com"
           git config --global user.name "Your Name"
           echo "NOW=$(date +'%Y-%m-%dT%H:%M:%S')" >> $GITHUB_ENV
-          echo $NOW >> index.js
+          echo "$NOW" >> index.js
           git add index.js package.json package-lock.json
           git commit -m "initialize npm package"
           git push
