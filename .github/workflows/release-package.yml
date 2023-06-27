@@ -18,7 +18,7 @@ jobs:
           git config --global user.name "Your Name"
           echo "NOW=$(date +'%Y-%m-%dT%H:%M:%S')" >> $GITHUB_ENV
           echo "test" >> index.js
-          git add index.js package.json package-lock.json
+          git add .
           git commit -m "initialize npm package"
           git push
       #- run: npm test
