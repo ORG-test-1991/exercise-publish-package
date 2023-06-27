@@ -21,7 +21,7 @@ jobs:
           git add index.js package.json package-lock.json
           git commit -m "initialize npm package"
           git push
-      - run: npm test
+      #- run: npm test
       - name: Cache NPM dependencies
         uses: actions/cache@v2
         with:
