@@ -45,10 +45,10 @@ jobs:
             ${{ runner.os }}-npm-cache-
       - uses: actions/setup-node@v1
         with:
-          token: ${{secrets.GITHUB_TOKEN}}
           node-version: 12
           registry-url: https://npm.pkg.github.com/
       - run: npm ci
+      - run: npm login
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
