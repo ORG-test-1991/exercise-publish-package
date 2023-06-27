@@ -32,9 +32,9 @@ jobs:
   publish-gpr:
     needs: build
     runs-on: ubuntu-latest
-    permissions:
-      packages: write
-      contents: read
+    #permissions:
+      #packages: write
+      #contents: read
     steps:
       - uses: actions/checkout@v3
       - name: Cache NPM dependencies
